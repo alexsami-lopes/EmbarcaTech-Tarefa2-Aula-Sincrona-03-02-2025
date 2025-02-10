@@ -1,8 +1,7 @@
-# EmbarcaTech Tarefa Aula Sincrona 27/01/2025
 
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=A6A6A6&height=120&section=header"/>
-<h1 align="center">Embarcatec | Tarefa Aula Sincrona 27/01/2025</h1>
+<h1 align="center">Embarcatec | Tarefa Aula Sincrona 03/02/2025</h1>
 
 <div align="center">  
   <img width=40% src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=A6A6A6&style=for-the-badge"/>
@@ -39,8 +38,8 @@ Siga os passos abaixo para clonar o repositório, importar no VS Code usando a e
 1. **Clone o repositório para sua máquina local**  
    Abra o terminal e execute os comandos abaixo:
    ```bash
-   git clone https://github.com/alexsami-lopes/EmbarcaTech-Tarefa-Aula-Sincrona-27-01-2025.git
-   cd EmbarcaTech-Tarefa-Aula-Sincrona-27-01-2025
+   git clone https://github.com/alexsami-lopes/EmbarcaTech-Tarefa2-Aula-Sincrona-03-02-2025.git
+   cd EmbarcaTech-Tarefa2-Aula-Sincrona-03-02-2025
 
 2. **Abra o VS Code e instale a extensão "Raspberry Pi Pico Project" (caso não já a tenha instalada)**
  - No VS Code, vá até "Extensões" (Ctrl+Shift+X)
@@ -71,11 +70,22 @@ Siga os passos abaixo para clonar o repositório, importar no VS Code usando a e
 
 ## 🔧 Funcionalidades Implementadas:
 
-1. O LED vermelho do LED RGB pisca continuamente 5 vezes por segundo.
-2. O botão A incrementa o número exibido na matriz de LEDs cada vez que for pressionado.
-3. O botão B decrementa o número exibido na matriz de LEDs cada vez que for pressionado.
-4. Os LEDs WS2812 foram ser usados para criar efeitos visuais representando números de 0 a 9.
-• Formatação fixa: Cada número é exibido na matriz em um formato fixo, como caracteres em estilo digital (ex.: segmentos iluminados que formem o número).
+1. Modificação da Biblioteca font.h • Adicionar caracteres minúsculos à biblioteca font.h. Use sua criatividade para criar os novos caracteres.
+2. Entrada de caracteres via PC
+• Utilize o Serial Monitor do VS Code para digitar os caracteres.
+• Cada caractere digitado no Serial Monitor deve ser exibido no display SSD1306.
+Observação: Apenas um caractere será enviado de cada vez, não é necessário suportar o envio de strings completas.
+• Quando um número entre 0 e 9 for digitado, um símbolo correspondente ao número deve ser exibido, também, na matriz 5x5 WS2812.
+3. Interação com o Botão A
+• Pressionar o botão A deve alternar o estado do LED RGB Verde (ligado/desligado).
+• A operação deve ser registrada de duas formas:
+o Uma mensagem informativa sobre o estado do LED deve ser exibida no display SSD1306
+o Um texto descritivo sobre a operação deve ser enviado ao Serial Monitor.
+4. Interação com o Botão B
+• Pressionar o botão A deve alternar o estado do LED RGB Azul (ligado/desligado).
+• A operação deve ser registrada de duas formas:
+o Uma mensagem informativa sobre o estado do LED deve ser exibida no display SSD1306
+o Um texto descritivo sobre a operação deve ser enviado ao Serial Monitor.
 
 ## 💻 Desenvolvedor
  
