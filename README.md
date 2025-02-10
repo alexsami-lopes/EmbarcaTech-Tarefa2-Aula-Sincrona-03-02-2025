@@ -1,6 +1,8 @@
 
 
+
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=FFB4A2&height=120&section=header"/>
+
 <h1 align="center">Embarcatec | Tarefa Aula Sincrona 03/02/2025</h1>
 
 <div align="center">  
