@@ -109,7 +109,7 @@ o Um texto descritivo sobre a operação é enviado ao Serial Monitor.
     
 <figcaption>
 
-**Figura 1** - Demo do Projeto no Wokwi.com
+**Figura 1** - Demo do Projeto no Wokwi.com - Acessível em: https://wokwi.com/projects/422451360686142465
     </figcaption>
   </figure>
 </div>
