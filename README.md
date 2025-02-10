@@ -1,16 +1,15 @@
-# EmbarcaTech Tarefa Aula Sincrona 27/01/2025
 
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=A6A6A6&height=120&section=header"/>
-<h1 align="center">Embarcatec | Tarefa Aula Sincrona 27/01/2025</h1>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=FFB4A2&height=120&section=header"/>
+<h1 align="center">Embarcatec | Tarefa Aula Sincrona 03/02/2025</h1>
 
 <div align="center">  
-  <img width=40% src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=A6A6A6&style=for-the-badge"/>
+  <img width=40% src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=FFB4A2&style=for-the-badge"/>
 </div>
 
 ## Objetivo do Projeto
 
-Projeto para Placa Bitdoglab (Raspberry Pico W) de um contador que exibe na matriz WS2812, números de 0 a 9, e os incrementa cada vez que o botão A da placa é acionado e descrementa sempre que o botão B da placa é acionado. Uso do debounce implementado para os botões.
+Projeto para Placa Bitdoglab (Raspberry Pico W) exibe na matriz WS2812 e no display SSD1306, números de 0 a 9, e letras maúsculas e minúsculas no display SSD1306 ao enviar caracteres via serial usando o teclado. Além disso, ao clicar o botão A a cor verde do led central é alternada entre liga/desliga e ao quando botão B da placa é acionado a cor azul é alternada entre liga/desliga. Uso do debounce implementado para os botões.
 
 
 ## 🗒️ Lista de requisitos
@@ -20,8 +19,9 @@ Projeto para Placa Bitdoglab (Raspberry Pico W) de um contador que exibe na matr
     - 2 Push buttons;
     - Protoboard;
     - Fios e jumpers; 
-    - 1 led vermelho;
-    - 1 Resistor 1kΩ;
+    - 3 leds vermelho, verde e azul;
+    - 3 Resistores 1kΩ;
+    - Display SSD1306;
     - Microcontrolador Raspberry Pi Pico W; 
     - Matriz de LEDs Coloridos (LED-RGB 5x5 WS2812);
 
@@ -39,8 +39,8 @@ Siga os passos abaixo para clonar o repositório, importar no VS Code usando a e
 1. **Clone o repositório para sua máquina local**  
    Abra o terminal e execute os comandos abaixo:
    ```bash
-   git clone https://github.com/alexsami-lopes/EmbarcaTech-Tarefa-Aula-Sincrona-27-01-2025.git
-   cd EmbarcaTech-Tarefa-Aula-Sincrona-27-01-2025
+   git clone https://github.com/alexsami-lopes/EmbarcaTech-Tarefa2-Aula-Sincrona-03-02-2025.git
+   cd EmbarcaTech-Tarefa2-Aula-Sincrona-03-02-2025
 
 2. **Abra o VS Code e instale a extensão "Raspberry Pi Pico Project" (caso não já a tenha instalada)**
  - No VS Code, vá até "Extensões" (Ctrl+Shift+X)
@@ -71,11 +71,22 @@ Siga os passos abaixo para clonar o repositório, importar no VS Code usando a e
 
 ## 🔧 Funcionalidades Implementadas:
 
-1. O LED vermelho do LED RGB pisca continuamente 5 vezes por segundo.
-2. O botão A incrementa o número exibido na matriz de LEDs cada vez que for pressionado.
-3. O botão B decrementa o número exibido na matriz de LEDs cada vez que for pressionado.
-4. Os LEDs WS2812 foram ser usados para criar efeitos visuais representando números de 0 a 9.
-• Formatação fixa: Cada número é exibido na matriz em um formato fixo, como caracteres em estilo digital (ex.: segmentos iluminados que formem o número).
+1. Modificação da Biblioteca font.h • Foram adicionados caracteres minúsculos à biblioteca font.h.
+2. Entrada de caracteres via PC
+• Utilizado o Serial Monitor do VS Code para digitar os caracteres.
+• Cada caractere digitado no Serial Monitor exibe no display SSD1306.
+Observação: Apenas um caractere será enviado de cada vez.
+• Quando um número entre 0 e 9 for digitado, um símbolo correspondente ao número é exibido, também, na matriz 5x5 WS2812.
+3. Interação com o Botão A
+• Pressionar o botão A alterna o estado do LED RGB Verde (ligado/desligado).
+• A operação é registrada de duas formas:
+o Uma mensagem informativa sobre o estado do LED é exibida no display SSD1306
+o Um texto descritivo sobre a operação é enviado ao Serial Monitor.
+4. Interação com o Botão B
+• Pressionar o botão A alterna o estado do LED RGB Azul (ligado/desligado).
+• A operação é registrada de duas formas:
+o Uma mensagem informativa sobre o estado do LED é exibida no display SSD1306
+o Um texto descritivo sobre a operação é enviado ao Serial Monitor.
 
 ## 💻 Desenvolvedor
  
@@ -96,7 +107,7 @@ Siga os passos abaixo para clonar o repositório, importar no VS Code usando a e
     
 <figcaption>
 
-**Figura 1** - Demo do Projeto no Wokwi.com - Acessível em: https://wokwi.com/projects/421810650360925185
+**Figura 1** - Demo do Projeto no Wokwi.com
     </figcaption>
   </figure>
 </div>
@@ -105,7 +116,7 @@ Siga os passos abaixo para clonar o repositório, importar no VS Code usando a e
 ## 🎥 Demonstração na Placa (Video): 
 
 <div align="center">
-  <a href="https://youtu.be/csX0XGo6aso" target="_blank">
+  <a href="https://youtu.be/XNgZfNbbnKY" target="_blank">
     <img src="images/Demo_Placa_Video.png" width="500px">
   </a>
 </div>
